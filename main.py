@@ -13,8 +13,10 @@ def serch(event):
     input_string = editBox.get()
     num = numCoutBox.get()
     keywordSerch = blogSerch.GoogleSerch()
-    if int(num) >= 5:
+    if int(num) < 0 and int(num) > 5:
         tkMessageBox.showerror("タブ数が多いです。", "検索するタブの数が多すぎます。1~5で入力してください。")
+    elif input_string == "":
+        tkMessageBox.showerror("検索ワードがありません。", "検索キーワード欄にキーワードを入力してください。")
     else:
         keywordSerch.googleSarch(num, input_string)
 
