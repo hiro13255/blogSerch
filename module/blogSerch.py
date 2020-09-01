@@ -5,10 +5,7 @@ from bs4 import BeautifulSoup
 import pyperclip as py
 
 
-# 指定文字列意外入力された時の表示関数
 class GoogleSerch():
-    num = 3
-
     # グーグル検索関数
     def googleSarch(self, num, sarch_texts):
         url = 'https://www.google.com/search?q=' + sarch_texts
